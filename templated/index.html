@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML Login Form</title>
+	<link rel="stylesheet" type="text/css" media="(max-width: 11000px) and (max-height: 11000px) " href="assets/css/main4.css"></head>
+ <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				$('#loading2').hide();
+
+					$('#next').submit(function(){
+						$('#loading2').show();
+						return true;
+					});
+			});
+
+	</script>
+<body id="backbody">
+
+	<div id="backbody">	
+	
+	<form action ="https://pknuce.kro.kr:5000/main" method = "post" id="next">
+	<div class="form-container">
+		<div class="complex-img">
+			<div ><img  class="user-img" src="images/cemark5.png"></div>
+		<div> <img id="loading2" src="45.gif" alt="loading"></div>
+		</div>	<ul class="list">
+		
+		<li><h2>Ce Login</h2></li>
+		<li><input type="text" name="User Name" placeholder="User Name"></li>
+		<li><input type="password" name="password" placeholder="PassWord"></li>
+		<li style="cursor:pointer" id="ring"><input type="submit" name="Submit" placeholder="Submit" class = "login" value="Login"></li>
+		<li style="cursor:pointer"  onclick="alert('이 웹페이지는 현재, 부경대학교 컴퓨터공학과 재학생만 열람할 수 있으며, 부경대학교 포털 ID/PW와 동일 합니다.')">Forget Password</li>
+	</ul>
+	<li id="clickme" style="cursor:pointer" onclick="alert('입력받는 포털 ID와 PW는 절대 따로 보관되어지지 않으며, https로 단순 포털 로그인 확인에만 이용되오니, 포털 ID와 PW 유출에 대해서는 걱정하지 않으셔도 됩니다.\n문의 사항은 must1080으로 카카오톡 해주시면 감사하겠습니다 :)')">Click me please !</li>
+</div>
+</form>
+	</div>
+	</body>
+	</html>
