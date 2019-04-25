@@ -21,7 +21,7 @@ def login(notices=None):
             user =request.form['User Name']
             password=request.form['password']
             def dblogin(userid):
-                conn = pymysql.connect(host='pknuce.ml', user='root', password ='rlflsdPrh12', db='students', charset='utf8')#준규봇
+                conn = pymysql.connect(host='host주소', user='userId', password ='비밀번호', db='db명', charset='utf8')
                 curs = conn.cursor()
                 curs.execute("SELECT EXISTS (SELECT num from students where num=%s) as success", userid)
                 result = curs.fetchall()[0][0]
@@ -30,6 +30,7 @@ def login(notices=None):
             confirm = dblogin(int(user))
             app.logger.debug(int(user))
             if confirm == 1:
+			//셀레니움을 이용해 ID와 PW를 받으면 DB에 저장하지 않고 바로 포털사이트에 대입하는 방법.
                 options = webdriver.ChromeOptions()
                 options.add_argument('headless')
                 options.add_argument('window-size=1920x1080')
@@ -46,10 +47,14 @@ def login(notices=None):
                 soup = BeautifulSoup(html, 'html.parser')
                 notices = soup.select('#user')
                 driver.quit()
+		//대입이 성공하면 ce.html 반환
                 return render_template('ce.html', notices=notices[0].text)
             else:
+		//실패시 error.html 반환
                 return render_template('error.html')
             #return "안녕하세요"
+
+//예외 발생시 error.html 반환
     except:
         user = request.args.get('User Name')
         password=request.args.get('password')
