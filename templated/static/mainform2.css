@@ -1,0 +1,361 @@
+@media (min-width: 601px){
+
+/*#wrapper{
+	border:5px solid red;
+
+}*/
+/*
+#wrapper>*{
+	border:5px solid green;
+}
+#wrapper>*>*{
+	border:5px solid blue;
+}   /* >* 은 자손들? 을 포함시키는 거  */
+#brt{
+padding:-50px;
+}
+body{
+	background-color:#ffffff;
+	/*background-image: url(../../images/bg2.jpg);*/
+	/*background-size:cover; /*화면 전체를 cover하도록 바꿔줌*/
+}
+
+#header{
+	display: block;
+	margin-top: -11px; /*마크 위쪽 빈 공간*/
+	/*padding-top:2rem; /*젤 위쪽 빈 공간 */
+	/*padding-bottom: 2rem;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-left: 0px;
+	display: block;
+	line-height: 21px;
+	*/
+	/*filter : none; /*filter의 기본값은 none 흐리게, 색상 채도, 물결모양 등의 기능을 수행*/
+
+}
+
+
+#header .logo{
+  /*margin-top: 10px;*/
+  width: 100px;
+  height: 86px;
+  /*margin-top: -100px;*/
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  
+}
+#header .font1{ /*main화면의 login, password => 아마 계정(본인)으로 바뀔 것 */
+
+	margin-top:-10px; /*margin은  object(젤가운데 물체를 의미)와 화면과의 여백(외부여백
+	)을 말하며 Padding은 object내의 내부여백을 의미함 */
+	float: right;   /*html "순서적"으로 float: right 가 적용된 요소의 다음 요소는 float:right가 적용된 요소의 왼쪽에 놓인다 !*/
+	font-size: 10pt; /*글자 크기*/
+	text-align: right; /*text-align은 block요소 안에 있는 inline 요소를 정렬함 //block 요소에만 text-align 속성 적용가능, 정렬되는 것은 block요소 안에 있는 inline요소만 가능(이미지도 가능)*/
+	/*상속됨, right는 오른쪽정렬 center : 중앙정렬 justifty 중앙을 비우고 왼쪾과 오른쪽열에 맞추어 화면을 늘어뜨림; */
+}
+/*
+#header1 {
+	margin :auto; //auto로 설정하면 중앙에 온데 해당 엘리먼트 컨테이너 안에서 ..
+}*/
+#header1 .textmain{
+	 /*width: 100%;*/
+	 /*height: 90%;  */
+	margin-top:2px;
+	background-size: cover; /*배경이미지를 꽉 채워줌*/
+	background-image: url(./bg2.jpg);
+	 -webkit-background-size: cover;
+     -moz-background-size: cover;
+      -o-background-size: cover;   /*이거 3개는 배경이미지를 알맞게 채워줌 !*/
+
+	/*position: fixed;*/ /*고장해주는 거지만 fix라서 다 가림 fix는 시도떄도 없이 고정됌*/
+	
+	left: 0px;
+	right: 0px;
+	position: absolute;
+ /*존나 빢침 ㅅ ㅣㅏㅂㄹ */
+	/*background-origin: border-box;
+	box-sizing: border-box; /*크기를 정함*/
+/*	background-clip: border-box;*/
+	
+	text-align:center;
+	 background-position: center;
+	
+	display:inline-block;  /*display는 보여주는거  inline은 가로 block 은 세로 none은 공간사라짐*/
+
+	/*  margin-left: 0px;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-top:-10px;*/
+	/*border-radius: 0%;*/
+	 /*   vertical-align: baseline;*/
+	
+	/*padding: 0.5px;/*1rem은 16픽셀*/
+	/*background-color: #C6C6C6; /*바깥원과 사진 사이의 색*/
+	/*background-size:  100%;*/
+	/*align-items: center;*/
+
+	
+
+	/*border:100px solid rgba(255,255,255,0.25); /*border는 선 0.25는 투명도 */
+	/*margin-bottom:2rem;*/
+}
+#header .avatar img{
+	/*margin-top: 10px;*/
+	width: 20px;
+	height: 30px;
+	float:right;
+	border-radius: 100%; /*radius는 반지름이란 뜻. */
+	/*display: block;*/
+
+}
+#header1 h1{
+	font-size:1.5rem;
+	color:rgba(255,255,255,0.5); /*그냥 white하는 것보다 rgba로 두는게 좋음 */
+	font-weight: 200;
+	font-family: 'Source Sans Pro', sans-serif; /*구글폰트에서 다운*/
+/*전체에다가 적용시코싶으면 body태그 안에다가 넣으면 됌 ! */
+	
+}
+#header1 h1 strong{
+	color:white;
+	font-weight: ;
+}
+#header1 h1 a{
+	font-size:1.5rem;
+	color:white;
+	text-decoration: none; /*점선 쓸려면 데코를 없애고 border의 밑, 한다음 dot으로 찎어주면 된다.*/
+	border-bottom:5px dotted rgba(255,255,255,0.5);   
+}
+#header1 ul.icons li{
+	text-origin: border-box;
+	display: inline-block; /*가로줄로 표현*/
+	border-radius: 100%;
+
+	
+	border:1px solid rgba(255,255,255,0.25);
+	background-color: rgba(255,255,255,0.1); 
+
+	width: 2rem;
+	height: 2rem;
+	display: inline-flex; /*화면 전체를 쓴다는 특성*/
+	justify-content: center; /**/
+	align-items: center; /*위치 ..? */
+	margin-right: 1.5rem;
+}
+#header1 ul.icons li .label{
+
+	display: none;
+	color: rgba(255,255,255,0.5);
+	
+}
+#header1 ul.icons li a{
+		color:rgba(255,255,255,0.5);
+		text-decoration: none;	
+		position: relative; 
+		top:-1.4px;   /*임의로 아이콘 올리기 가능*/
+}
+#billimg{
+border:1.1px solid #ABABAB;
+}
+#norice2{
+	padding-top: 15px;
+	padding-left: -10px;
+	font-size:80%;
+text-align: left;
+}
+
+#norice2 .fontsize1{
+padding-left: 9px;
+}
+}
+
+
+
+@media (max-width: 600px) and (max-height: 900px){
+
+/*#wrapper{
+	border:5px solid red;
+
+}*/
+/*
+#wrapper>*{
+	border:5px solid green;
+}
+#wrapper>*>*{
+	border:5px solid blue;
+}   /* >* 은 자손들? 을 포함시키는 거  */
+#norice2{
+	padding-top: 5px;
+	padding-left: 10px;
+	font-size:80%;
+	text-align:left;
+}
+#norice2 .fontsize1{
+	padding-left: 9px;
+}
+#billimg{
+border:1.1px solid: #ABABAB;
+}
+body{
+	background-color:#ffffff;
+	/*background-image: url(../../images/bg2.jpg);*/
+	/*background-size:cover; /*화면 전체를 cover하도록 바꿔줌*/
+}
+
+#header{
+	display: block;
+	margin-top: -12px; /*마크 위쪽 빈 공간*/
+	/*padding-top:2rem; /*젤 위쪽 빈 공간 */
+	/*padding-bottom: 2rem;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-left: 0px;
+	display: block;
+	line-height: 21px;
+	*/
+	/*filter : none; /*filter의 기본값은 none 흐리게, 색상 채도, 물결모양 등의 기능을 수행*/
+
+}
+
+
+#header .logo{
+  /*margin-top: 10px;*/
+  width: 55px;
+  height: 45px;
+  /*margin-top: -100px;*/
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  
+}
+#header .font1{ /*main화면의 login, password => 아마 계정(본인)으로 바뀔 것 */
+	bottom:10px;
+	left: -5px;
+	margin-top:-8px; /*margin은  object(젤가운데 물체를 의미)와 화면과의 여백(외부여백
+	)을 말하며 Padding은 object내의 내부여백을 의미함 */
+	float: right;   /*html "순서적"으로 float: right 가 적용된 요소의 다음 요소는 float:right가 적용된 요소의 왼쪽에 놓인다 !*/
+	font-size: 8pt; /*글자 크기*/
+	text-align: right; /*text-align은 block요소 안에 있는 inline 요소를 정렬함 //block 요소에만 text-align 속성 적용가능, 정렬되는 것은 block요소 안에 있는 inline요소만 가능(이미지도 가능)*/
+	/*상속됨, right는 오른쪽정렬 center : 중앙정렬 justifty 중앙을 비우고 왼쪾과 오른쪽열에 맞추어 화면을 늘어뜨림; */
+}
+/*
+#header1 {
+	margin :auto; //auto로 설정하면 중앙에 온데 해당 엘리먼트 컨테이너 안에서 ..
+}*/
+#header1 .textmain{
+	 /*width: 100%;*/
+	 height: 83px; 
+	margin-top:-10px;
+	background-size: cover; /*배경이미지를 꽉 채워줌*/
+	background-image: url("./bg2.jpg");
+	 -webkit-background-size: cover;
+     -moz-background-size: cover;
+      -o-background-size: cover;   /*이거 3개는 배경이미지를 알맞게 채워줌 !*/
+
+	/*position: fixed;*/ /*고장해주는 거지만 fix라서 다 가림 fix는 시도떄도 없이 고정됌*/
+	
+	left: 0px;
+	right: 0px;
+	position: absolute;
+ /*존나 빢침 ㅅ ㅣㅏㅂㄹ */
+	/*background-origin: border-box;
+	box-sizing: border-box; /*크기를 정함*/
+/*	background-clip: border-box;*/
+	
+	text-align:center;
+	 background-position: center;
+	
+	display:inline-block;  /*display는 보여주는거  inline은 가로 block 은 세로 none은 공간사라짐*/
+
+	/*  margin-left: 0px;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-top:-10px;*/
+	/*border-radius: 0%;*/
+	 /*   vertical-align: baseline;*/
+	
+	/*padding: 0.5px;/*1rem은 16픽셀*/
+	/*background-color: #C6C6C6; /*바깥원과 사진 사이의 색*/
+	/*background-size:  100%;*/
+	/*align-items: center;*/
+
+	
+
+	/*border:100px solid rgba(255,255,255,0.25); /*border는 선 0.25는 투명도 */
+	/*margin-bottom:2rem;*/
+}
+#header .avatar img{
+	/*margin-top: 10px;*/
+	width: 20px;
+	height: 30px;
+	float:right;
+	border-radius: 100%; /*radius는 반지름이란 뜻. */
+	/*display: block;*/
+
+}
+#header1 h1{
+	font-size:11px;
+	color:rgba(255,255,255,0.5); /*그냥 white하는 것보다 rgba로 두는게 좋음 */
+	font-weight: 190;
+	font-family: 'Source Sans Pro', sans-serif; /*구글폰트에서 다운*/
+/*전체에다가 적용시코싶으면 body태그 안에다가 넣으면 됌 ! */
+	
+}
+#header1 h1 strong{
+	color:white;
+	font-weight: ;
+}
+#header1 h1 a{
+	font-size:15px;
+	color:white;
+	text-decoration: none; /*점선 쓸려면 데코를 없애고 border의 밑, 한다음 dot으로 찎어주면 된다.*/
+	border-bottom:3px dotted rgba(255,255,255,0.5);   
+}
+.icons{
+margin-left:-3px;
+margin-top:-1px;
+top: 1px;
+}
+
+#header1 ul.icons li{
+	text-origin: border-box;
+	display: inline-block; /*가로줄로 표현*/
+	border-radius: 100%;
+
+	
+	border:1px solid rgba(255,255,255,0.25);
+	background-color: rgba(255,255,255,0.1); 
+
+	width: 1.7rem;
+	height: 1.7rem;
+	display: inline-flex; /*화면 전체를 쓴다는 특성*/
+	justify-content: center; /**/
+	align-items: center; /*위치 ..? */
+	margin-right: 2.1rem;
+}
+#header1 ul.icons li .label{
+
+	display: none;
+	color: rgba(255,255,255,0.5);
+	
+}
+#header1 ul.icons li a{
+		color:rgba(255,255,255,0.5);
+		text-decoration: none;	
+		position: relative; 
+	   /*임의로 아이콘 올리기 가능*/
+}
+#label1{
+top 1px
+}
+#label2{
+top: 0.5px;
+}
+#billimg{
+	border:1.1px solid #ABABAB;
+}
+}
